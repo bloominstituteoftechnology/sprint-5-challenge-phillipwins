@@ -45,22 +45,20 @@ async function sprintChallenge5() {
     card.className = 'card';
 
     const heading = document.createElement('h3');
-    heading.className = 'learner-name';
     heading.textContent = learner.fullName;
     card.appendChild(heading);
 
     const email = document.createElement('div');
-    email.className = 'learner-email';
     email.textContent = learner.email;
     card.appendChild(email);
 
     const mentorsHeading = document.createElement('h4');
-    mentorsHeading.className = 'mentors-heading';
-    mentorsHeading.textContent = 'Mentors:';
+    mentorsHeading.className = 'closed';
+    mentorsHeading.textContent = 'Mentors';
     card.appendChild(mentorsHeading);
 
     const mentorsList = document.createElement('ul');
-    mentorsList.className = 'mentors-list';
+   
 
     learner.mentors.forEach(mentor => {
       const mentorItem = document.createElement('li');
